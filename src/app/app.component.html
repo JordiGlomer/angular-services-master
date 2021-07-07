@@ -1,0 +1,20 @@
+<!-- {{countries | json}} -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <!-- navbar items, navbar burger... -->
+    </div>
+</nav>
+<nav>
+    <div class="select" [formGroup]="myForm">
+        <select name="countries" id="" formControlName="countries">
+    <option [value]="country.alpha2Code" *ngFor = "let country of countries">{{country.name}}</option>
+   <!-- <option>With options</option> -->
+  </select>
+    </div>
+</nav>
+
+<main>
+    <ul>
+        <li *ngFor="let neighbour of neighbours | async">{{neighbour.country_name}}</li>
+    </ul>
+</main>
